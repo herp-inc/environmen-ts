@@ -1,0 +1,38 @@
+{
+  "name": "@herp-inc/environmen-ts",
+  "description": "A composable environment variable decoder library",
+  "version": "0.1.0",
+  "keywords": [
+    "fp-ts",
+    "environment variables"
+  ],
+  "main": "cjs/index.js",
+  "module": "mjs/index.js",
+  "types": "cjs/index.d.ts",
+  "sideEffects": false,
+  "repository": "https://github.com/herp-inc/environmen-ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@herp-inc/eslint-config": "0.11.0",
+    "@herp-inc/eslint-config-jest": "0.3.0",
+    "@rollup/plugin-typescript": "8.3.0",
+    "@types/jest": "27.0.3",
+    "@typescript-eslint/eslint-plugin": "5.7.0",
+    "@typescript-eslint/parser": "5.7.0",
+    "eslint": "8.5.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-jest": "25.3.0",
+    "fast-check": "2.20.0",
+    "fp-ts": "2.11.5",
+    "jest": "27.4.5",
+    "prettier": "2.5.1",
+    "rollup": "2.61.1",
+    "ts-jest": "27.1.2",
+    "typescript": "4.5.4"
+  },
+  "peerDependencies": {
+    "fp-ts": "^2.11.0"
+  }
+}

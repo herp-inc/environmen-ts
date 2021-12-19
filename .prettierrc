@@ -1,0 +1,14 @@
+{
+  "printWidth": 120,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "overrides": [
+    {
+      "files": ["*.js", "*.ts"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}
