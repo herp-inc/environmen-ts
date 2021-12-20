@@ -3,16 +3,16 @@ import { Variable } from '../Variable';
 import { EnvironmentError } from './EnvironmentError';
 
 class DecodeFailed extends EnvironmentError {
-    public constructor(public readonly variable: Variable, public readonly message: string) {
-        super();
-    }
+    public readonly message: string;
+    public readonly key: string;
+    public readonly value: string;
 
-    public toJSON(): object {
-        return {
-            key: this.variable.key,
-            value: this.variable.sensitive ? '*REDACTED*' : this.variable,
-            message: `$${this.variable.key} ${this.message}`,
-        };
+    public constructor(variable: Variable, reason: string) {
+        super();
+
+        this.message = `$${variable.key} ${reason}`;
+        this.key = variable.key;
+        this.value = variable.sensitive ? '*REDACTED*' : variable.value;
     }
 }
 
