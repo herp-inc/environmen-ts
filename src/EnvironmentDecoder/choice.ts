@@ -3,7 +3,7 @@ import * as RNEA from 'fp-ts/ReadonlyNonEmptyArray';
 
 import { ChoiceError, type EnvironmentError } from '../EnvironmentError';
 
-import type { Decoder } from './Decoder';
+import type { Decoder } from './EnvironmentDecoder';
 
 /**
  * Tries to apply the decoders in order, until one of them succeeds.

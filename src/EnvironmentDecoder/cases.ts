@@ -1,4 +1,4 @@
-import { Decoder } from './Decoder';
+import { Decoder } from './EnvironmentDecoder';
 
 /**
  * Performs a case analysis toward the given string, then returns the matched decoder.

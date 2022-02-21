@@ -1,7 +1,7 @@
 import type { LookupOptions } from '../Environment';
 import type { VariableDecoder } from '../VariableDecoder';
 
-import type { Decoder } from './Decoder';
+import type { Decoder } from './EnvironmentDecoder';
 
 /**
  * Loads an environment variable and decodes it.

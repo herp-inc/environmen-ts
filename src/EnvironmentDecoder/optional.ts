@@ -3,7 +3,7 @@ import type * as O from 'fp-ts/Option';
 import type { LookupOptions } from '../Environment';
 import type { VariableDecoder } from '../VariableDecoder';
 
-import type { Decoder } from './Decoder';
+import type { Decoder } from './EnvironmentDecoder';
 
 /**
  * Loads an optional environment variable and decodes it if found.

@@ -2,7 +2,7 @@ import type { Lazy } from 'fp-ts/function';
 import * as O from 'fp-ts/Option';
 import * as RE from 'fp-ts/ReaderEither';
 
-import { Decoder } from './Decoder';
+import { Decoder } from './EnvironmentDecoder';
 
 /**
  * Provides the default value.
