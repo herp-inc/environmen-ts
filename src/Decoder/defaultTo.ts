@@ -10,7 +10,7 @@ import { Decoder } from './Decoder';
  * @example
  * ```
  * pipe(
- *     required('PORT', port()),
+ *     optional('PORT', port()),
  *     defaultTo(() => 8000),
  * )
  * ```
