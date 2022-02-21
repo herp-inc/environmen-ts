@@ -16,7 +16,7 @@ const ask = (): VariableDecoder<string> => RE.asks(({ value }) => value);
 const asks = <A>(f: (value: string) => A): VariableDecoder<A> => RE.asks(({ value }) => f(value));
 
 const decodeFailed =
-    (msg: string): RE.ReaderEither<Variable, EnvironmentError, never> =>
+    <A>(msg: string): RE.ReaderEither<Variable, EnvironmentError, A> =>
     (variable) =>
         E.left(new DecodeFailed(variable, msg));
 
