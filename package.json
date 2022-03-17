@@ -25,7 +25,7 @@
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jest": "26.1.1",
     "fast-check": "2.22.0",
-    "fp-ts": "2.11.8",
+    "fp-ts": "2.11.9",
     "jest": "27.5.1",
     "prettier": "2.5.1",
     "rollup": "2.68.0",
