@@ -24,7 +24,7 @@
     "eslint-import-resolver-typescript": "2.7.1",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jest": "26.1.3",
-    "fast-check": "2.23.2",
+    "fast-check": "2.24.0",
     "fp-ts": "2.11.9",
     "jest": "27.5.1",
     "prettier": "2.6.2",
