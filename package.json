@@ -15,7 +15,7 @@
   "devDependencies": {
     "@herp-inc/eslint-config": "0.16.0",
     "@herp-inc/eslint-config-jest": "0.4.0",
-    "@rollup/plugin-typescript": "8.3.1",
+    "@rollup/plugin-typescript": "8.3.2",
     "@types/jest": "27.4.1",
     "@typescript-eslint/eslint-plugin": "5.17.0",
     "@typescript-eslint/parser": "5.17.0",
@@ -25,10 +25,10 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-jest": "26.1.4",
     "fast-check": "2.24.0",
-    "fp-ts": "2.11.9",
+    "fp-ts": "2.11.10",
     "jest": "27.5.1",
     "prettier": "2.6.2",
-    "rollup": "2.70.1",
+    "rollup": "2.70.2",
     "ts-jest": "27.1.4",
     "typescript": "4.6.3"
   },
