@@ -22,10 +22,10 @@ const bigInt = (options: Options = {}): VariableDecoder<BigInt> =>
     pipe(
         asks((x) => O.tryCatch(() => BigInt(x))),
         RE.chain(unwrap('must be a valid BigInt')),
-        withOpt(options?.max)((max) =>
+        withOpt(options.max)((max) =>
             RE.chain(validate((n) => n <= max, `must be smaller than or equal to ${String(max)}`)),
         ),
-        withOpt(options?.min)((min) =>
+        withOpt(options.min)((min) =>
             RE.chain(validate((n) => n >= min, `must be greater than or equal to ${String(min)}`)),
         ),
     );
