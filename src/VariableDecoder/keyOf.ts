@@ -4,11 +4,9 @@ import * as RE from 'fp-ts/ReaderEither';
 import { ask, validate, VariableDecoder } from './VariableDecoder';
 
 const oneOf = (xs: string[]): string =>
-    xs
-        .slice(0, -1)
-        .map((x) => `'${x}'`)
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        .join(', ') + `, or '${xs[xs.length - 1]!}'`;
+    new Intl.ListFormat('en', {
+        type: 'disjunction',
+    }).format(xs.map((x) => `'${x}'`));
 
 /**
  * Decodes a string that is a key of the given object.
