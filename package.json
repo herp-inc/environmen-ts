@@ -28,7 +28,7 @@
     "fp-ts": "2.12.3",
     "jest": "27.5.1",
     "prettier": "2.7.1",
-    "rollup": "2.78.1",
+    "rollup": "2.79.0",
     "ts-jest": "27.1.5",
     "typescript": "4.8.2"
   },
