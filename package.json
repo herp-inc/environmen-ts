@@ -15,7 +15,7 @@
   "devDependencies": {
     "@herp-inc/eslint-config": "0.19.0",
     "@herp-inc/eslint-config-jest": "0.4.0",
-    "@herp-inc/tsconfig.json": "^1.0.0",
+    "@herp-inc/tsconfig.json": "1.0.0",
     "@rollup/plugin-typescript": "8.5.0",
     "@types/jest": "27.5.2",
     "@typescript-eslint/eslint-plugin": "5.17.0",
