@@ -12,7 +12,7 @@ describe(number, () => {
 
         fc.assert(
             fc.property(
-                fc.float().filter((x) => Number.isFinite(x)),
+                fc.float().filter((x) => Number.isFinite(x) && !Object.is(x, -0)),
                 (n) => {
                     const variable = new Variable('KEY', String(n));
                     expect(decoder(variable)).toStrictEqual(E.right(n));
@@ -25,5 +25,11 @@ describe(number, () => {
         const decoder = number();
         const variable = new Variable('KEY', String(str));
         expect(decoder(variable)).toStrictEqual(E.left(new DecodeFailed(variable, 'must be finite')));
+    });
+
+    test.each([[-0, 0]])('regards "%s" as `%s`', (input, output) => {
+        const decoder = number();
+        const variable = new Variable('KEY', String(input));
+        expect(decoder(variable)).toStrictEqual(E.right(output));
     });
 });
