@@ -18,7 +18,7 @@ type Options = {
 /**
  * Decodes a bigint.
  */
-const bigInt = (options: Options = {}): VariableDecoder<bigint> =>
+const bigint = (options: Options = {}): VariableDecoder<bigint> =>
     pipe(
         asks((x) => O.tryCatch(() => BigInt(x))),
         RE.chain(unwrap('must be a valid bigint')),
@@ -30,4 +30,4 @@ const bigInt = (options: Options = {}): VariableDecoder<bigint> =>
         ),
     );
 
-export { bigInt };
+export { bigint };

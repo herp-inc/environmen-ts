@@ -4,14 +4,14 @@ import * as E from 'fp-ts/Either';
 import { DecodeFailed } from '../EnvironmentError';
 import { Variable } from '../Variable';
 
-import { bigInt } from './bigInt';
+import { bigint } from './bigint';
 
-describe(bigInt, () => {
+describe(bigint, () => {
     it('accepts an arbitrary bigint', () => {
         fc.assert(
             fc.property(fc.bigInt(), (n) => {
                 const variable = new Variable('KEY', String(n));
-                expect(bigInt()(variable)).toStrictEqual(E.right(n));
+                expect(bigint()(variable)).toStrictEqual(E.right(n));
             }),
         );
     });
@@ -25,7 +25,7 @@ describe(bigInt, () => {
                     fc.bigInt().filter((n) => n <= max),
                     (n) => {
                         const variable = new Variable('KEY', String(n));
-                        expect(bigInt({ max: 42n })(variable)).toStrictEqual(E.right(n));
+                        expect(bigint({ max: 42n })(variable)).toStrictEqual(E.right(n));
                     },
                 ),
             );
@@ -37,7 +37,7 @@ describe(bigInt, () => {
                     fc.bigInt().filter((n) => n > 42),
                     (n) => {
                         const variable = new Variable('KEY', String(n));
-                        expect(bigInt({ max: 42n })(variable)).toStrictEqual(
+                        expect(bigint({ max: 42n })(variable)).toStrictEqual(
                             E.left(new DecodeFailed(variable, 'must be smaller than or equal to 42')),
                         );
                     },

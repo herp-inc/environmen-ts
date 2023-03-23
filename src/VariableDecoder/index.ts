@@ -1,5 +1,5 @@
 export { base64 } from './base64';
-export { bigInt } from './bigInt';
+export { bigint } from './bigint';
 export { boolean } from './boolean';
 export { hex } from './hex';
 export { host } from './host';
