@@ -1722,10 +1722,10 @@ expect@^27.5.1:
     jest-matcher-utils "^27.5.1"
     jest-message-util "^27.5.1"
 
-fast-check@3.6.3:
-  version "3.6.3"
-  resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-3.6.3.tgz#9adb8161390c4a6a84c0f3ed333b15e1c7292f8a"
-  integrity sha512-5+ovrjQLUa+F9RbRcW7A++K+olKy2mNgYNfFmXSzQOAQ/Fuit12F1UI8z5Bic9YgRkUAQqXSkFUAAs7xohbvvg==
+fast-check@3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-3.7.1.tgz#bfe4b25ee3b1761afd4bfe5f49fc94998e7d2509"
+  integrity sha512-d63EsxP1eedA+x94xNxIpTWtBShq95KL6ZSrKTD0Pp1lPASmajAaDHJ71c5ebwZ+vBzlTt3AOalcAnBzL7PQ6Q==
   dependencies:
     pure-rand "^6.0.0"
 
