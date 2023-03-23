@@ -8,20 +8,20 @@ type Options = {
     /**
      * Maximum value that will be accepted (inclusive)
      */
-    max?: BigInt | undefined;
+    max?: bigint | undefined;
     /**
      * Minimum value that will be accepted (inclusive)
      */
-    min?: BigInt | undefined;
+    min?: bigint | undefined;
 };
 
 /**
- * Decodes a BigInt.
+ * Decodes a bigint.
  */
-const bigInt = (options: Options = {}): VariableDecoder<BigInt> =>
+const bigInt = (options: Options = {}): VariableDecoder<bigint> =>
     pipe(
         asks((x) => O.tryCatch(() => BigInt(x))),
-        RE.chain(unwrap('must be a valid BigInt')),
+        RE.chain(unwrap('must be a valid bigint')),
         withOpt(options.max)((max) =>
             RE.chain(validate((n) => n <= max, `must be smaller than or equal to ${String(max)}`)),
         ),
