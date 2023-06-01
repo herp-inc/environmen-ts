@@ -20,7 +20,11 @@ describe(origin, () => {
                     .map(([url, port]) => `${new URL(url).origin}:${port}`),
                 (str) => {
                     const variable = new Variable('KEY', str);
-                    expect(decoder(variable)).toStrictEqual(E.right(str));
+
+                    const { protocol, hostname, port } = new URL(str);
+                    const expected = { protocol, hostname, port };
+
+                    expect(decoder(variable)).toStrictEqual(E.right(expected));
                 },
             ),
         );
