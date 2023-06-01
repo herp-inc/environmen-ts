@@ -1,7 +1,7 @@
 {
   "name": "@herp-inc/environmen-ts",
   "description": "A composable environment variable decoder library",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "keywords": [
     "fp-ts",
     "environment variables"
