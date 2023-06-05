@@ -4,7 +4,7 @@ import * as RE from 'fp-ts/ReaderEither';
 
 import { ask, decodeFailed, validate, VariableDecoder } from './VariableDecoder';
 
-type Origin = Pick<URL, 'protocol' | 'hostname' | 'port'>;
+type Origin = Pick<URL, 'protocol' | 'host' | 'hostname' | 'port'>;
 
 /**
  * Decodes a URL origin (scheme + hostname + port).
@@ -21,8 +21,9 @@ const origin = (): VariableDecoder<Origin> =>
         ),
         RE.chain(validate(({ url }) => url.pathname !== '', 'must not have a pathname')),
         RE.chain(validate(({ value, url }) => url.origin === value, 'must be a valid URL origin')),
-        RE.map(({ url: { protocol, hostname, port } }) => ({
+        RE.map(({ url: { protocol, host, hostname, port } }) => ({
             protocol,
+            host,
             hostname,
             port,
         })),

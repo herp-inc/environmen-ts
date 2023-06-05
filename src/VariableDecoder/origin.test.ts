@@ -21,8 +21,8 @@ describe(origin, () => {
                 (str) => {
                     const variable = new Variable('KEY', str);
 
-                    const { protocol, hostname, port } = new URL(str);
-                    const expected = { protocol, hostname, port };
+                    const { protocol, host, hostname, port } = new URL(str);
+                    const expected = { protocol, host, hostname, port };
 
                     expect(decoder(variable)).toStrictEqual(E.right(expected));
                 },
